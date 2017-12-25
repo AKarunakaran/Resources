@@ -10,8 +10,7 @@ pii egcd(int a, int b, pii x = {1, 0}, pii y = {0, 1}) {
 // Finds x s.t. (a*x) % n == 1
 // Assumes a is not zero divisor (i.e. gcd(a, n) == 1)
 int modInv(int a, int n) {
-	pii p = egcd(a, n);
-	return ((p.first % n) + n) % n;
+	return ((egcd(a, n).first % n) + n) % n;
 }
 
 
@@ -30,6 +29,5 @@ pll egcd(ll a, ll b, pll x = {1, 0}, pll y = {0, 1}) {
 // Finds x s.t. (a*x) % n == 1
 // Assumes a is not zero divisor (i.e. gcd(a, n) == 1)
 ll modInv(ll a, ll n) {
-	pll p = egcd(a, n);
-	return ((p.first % n) + n) % n;
+	return ((egcd(a, n).first % n) + n) % n;
 }
